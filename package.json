@@ -1,0 +1,23 @@
+{
+  "name": "stimulus-dropbox",
+  "version": "0.1.0",
+  "description": "Stimulus-Dropbox",
+  "main": "stimulus-dropbox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raicheff/stimulus-dropbox.git"
+  },
+  "keywords": [
+    "stimulus",
+    "dropbox"
+  ],
+  "author": "Boris Raicheff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raicheff/stimulus-dropbox/issues"
+  },
+  "homepage": "https://github.com/raicheff/stimulus-dropbox#readme"
+}
