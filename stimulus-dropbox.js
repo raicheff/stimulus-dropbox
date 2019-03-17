@@ -46,7 +46,7 @@ export default class extends Controller {
 
     Dropbox.choose(options);
 
-    this.element.blur();
+    this.element.disabled = true;
 
   }
 
@@ -77,11 +77,15 @@ export default class extends Controller {
     const event = new CustomEvent("choose", { detail: { files: files } });
     this.element.dispatchEvent(event);
 
+    this.element.disabled = false;
+
   }
 
   _cancel() {
 
     this.element.dispatchEvent(new Event("cancel"));
+
+    this.element.disabled = false;
 
   }
 
