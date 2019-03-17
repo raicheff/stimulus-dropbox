@@ -46,6 +46,8 @@ export default class extends Controller {
 
     Dropbox.choose(options);
 
+    this.element.blur();
+
   }
 
   _inject(listener) {
@@ -75,15 +77,11 @@ export default class extends Controller {
     const event = new CustomEvent("choose", { detail: { files: files } });
     this.element.dispatchEvent(event);
 
-    this.element.blur();
-
   }
 
   _cancel() {
 
     this.element.dispatchEvent(new Event("cancel"));
-
-    this.element.blur();
 
   }
 
