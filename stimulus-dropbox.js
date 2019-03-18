@@ -34,13 +34,12 @@ export default class extends Controller {
       cancel:  this._cancel.bind(this),
     };
 
-    for (const key of [
-      "linkType",
-      "multiselect",
-      "folderselect",
-      "sizeLimit"
-    ]) {
+    for (const key of ["linkType"]) {
       this.data.has(key) && (options[key] = this.data.get(key));
+    }
+
+    for (const key of ["folderselect", "multiselect", "sizeLimit"]) {
+      this.data.has(key) && (options[key] = JSON.parse(this.data.get(key)));
     }
 
     for (const key of ["extensions"]) {
