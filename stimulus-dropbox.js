@@ -37,11 +37,14 @@ export default class extends Controller {
     for (const key of [
       "linkType",
       "multiselect",
-      "extensions",
       "folderselect",
       "sizeLimit"
     ]) {
       this.data.has(key) && (options[key] = this.data.get(key));
+    }
+
+    for (const key of ["extensions"]) {
+      this.data.has(key) && (options[key] = this.data.get(key).split(" "));
     }
 
     Dropbox.choose(options);
