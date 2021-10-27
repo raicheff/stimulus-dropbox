@@ -6,7 +6,7 @@
  */
 
 
-import { Controller } from "stimulus";
+import { Controller } from "@hotwired/stimulus";
 
 
 // https://www.dropbox.com/developers/chooser
